@@ -14,7 +14,7 @@ if (idade < 13) {
 console.log(categoria);
 
 
-let adiv = 3; // Suponha que o usuário escolheu o número 3
+let adiv = 3;
 let numeroCorreto = 3;
 
 switch (adiv) {
