@@ -26,12 +26,55 @@ class Veiculo
 
 class Estudante
 {
-    constructor (nota){
+    constructor (nota,media){
          this.nota=[nota];
+         let media;
+         for(let i;i<div;i++)
+         {
+            media += nota[i];
+         }
     }
     calcularMedia()
     {
-        console.log(this.nota)
+        let media
+        media /= nota.length
+        console.log(this.media)
     }
 }
 
+// 4. Método Estático para Conversão de Temperatura: Na classe
+// Utilitario, adicione um método estático que converte temperatura de
+// Celsius para Fahrenheit.
+
+
+class Jogo
+{
+    static numeroAleatorio()
+    {
+        return Math.floor(Math.random()*100);
+    }
+    constructor(numF)
+    {
+        let numF
+
+        if(numF === numeroAleatorio)
+        {
+            console.log("Número certo")
+        }else
+        {
+            console.log("Número Errado")
+        }
+    }
+}
+
+
+class ContaBancaria
+{
+    constructor (){
+       
+    }
+    sacar()
+    {
+        console.log()
+    }
+}
