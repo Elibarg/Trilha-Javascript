@@ -1,80 +1,76 @@
-class Animal
-{
-    constructor (nome,som){
-        this.nome=nome;
-        this.som=som;
+class Animal {
+    constructor(nome, som) {
+        this.nome = nome;
+        this.som = som;
     }
-    falar()
-    {
-        console.log(this.nome,this.som)
-    }
-}
 
-class Veiculo
-{
-    constructor (marca,modelo,velocidadeMaxima){
-        this.marca=marca;
-        this.modelo=modelo;
-        this.velocidadeMaxima=velocidadeMaxima;
-    }
-    descrever()
-    {
-        console.log(this.marca,this.modelo,this.velocidadeMaxima)
+    falar() {
+        console.log(`${this.nome} faz: ${this.som}`);
     }
 }
 
 
-class Estudante
-{
-    constructor (nota,media){
-         this.nota=[nota];
-         let media;
-         for(let i;i<div;i++)
-         {
-            media += nota[i];
-         }
+class Veiculo {
+    constructor(marca, modelo, velocidadeMaxima) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidadeMaxima = velocidadeMaxima;
     }
-    calcularMedia()
-    {
-        let media
-        media /= nota.length
-        console.log(this.media)
+
+    descrever() {
+        console.log(`Veículo: ${this.marca} ${this.modelo}, Velocidade Máxima: ${this.velocidadeMaxima} km/h`);
     }
 }
 
-// 4. Método Estático para Conversão de Temperatura: Na classe
-// Utilitario, adicione um método estático que converte temperatura de
-// Celsius para Fahrenheit.
 
-
-class Jogo
-{
-    static numeroAleatorio()
-    {
-        return Math.floor(Math.random()*100);
+class Estudante {
+    constructor(nome, notas) {
+        this.nome = nome;
+        this.notas = notas; // array de notas
     }
-    constructor(numF)
-    {
-        let numF
 
-        if(numF === numeroAleatorio)
-        {
-            console.log("Número certo")
-        }else
-        {
-            console.log("Número Errado")
+    calcularMedia() {
+        const soma = this.notas.reduce((acc, nota) => acc + nota, 0);
+        const media = soma / this.notas.length;
+        return media;
+    }
+}
+
+
+
+class Utilitario {
+    static celsiusParaFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+    }
+}
+
+
+
+class Jogo {
+    static jogar(palpite) {
+        const numero = Math.floor(Math.random() * 100) + 1;
+        console.log(`Número gerado: ${numero}`);
+        if (palpite === numero) {
+            return "Parabéns! Você acertou!";
+        } else {
+            return "Tente novamente.";
         }
     }
 }
 
 
-class ContaBancaria
-{
-    constructor (){
-       
+
+class ContaBancaria {
+    constructor(saldoInicial) {
+        this.saldo = saldoInicial;
     }
-    sacar()
-    {
-        console.log()
+
+    sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+            console.log(`Saque de R$${valor} realizado. Saldo atual: R$${this.saldo}`);
+        } else {
+            console.log("Saldo insuficiente para saque.");
+        }
     }
 }
