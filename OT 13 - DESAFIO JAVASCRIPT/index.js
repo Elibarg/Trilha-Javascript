@@ -20,3 +20,22 @@ let retorno = atualizarValor(42);
 /*
 O valor da variável agora é 42.
 */
+
+function val(val1,val2,val3) 
+{
+  val1 = 2;
+  val2 = 3;
+  val3 = 4;
+ 
+  do {
+    console.log("Preencha todos os valores corretamente!")
+  } while (va1 === null && val2 === null && val3 === null);
+  return val1*val2*val3+2
+}
+val(3,4);//50
+
+val(3,4,5);//62
+
+function name(va1, val2, val3) {
+  
+}
