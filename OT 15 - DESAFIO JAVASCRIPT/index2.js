@@ -1,32 +1,4 @@
 /*
-Declare uma variável chamada ‘isTruthy’, e atribua a ela uma função que recebe um único parâmetro como argumento. 
-Essa função deve retornar ‘true’ se o equivalente booleano para o valor passado no argumento for ‘true’, ou ‘false’ para o contrário.
-*/
-let isTruthy = function(param) {
-  return !!param;
-};
-
-// Invoque a função criada acima, passando todos os tipos de valores ‘falsy’.
-isTruthy(false); // false
-isTruthy(null); // false
-isTruthy(undefined); // false
-isTruthy(0); // false
-isTruthy(NaN); // false
-isTruthy(''); // false
-
-// Invoque a função criada acima passando como parâmetro 10 valores ‘truthy’.
-isTruthy(true); // true
-isTruthy(1); // true
-isTruthy('a'); // true
-isTruthy([]); // true
-isTruthy({}); // true
-isTruthy(function() {}); // true
-isTruthy(-1); // true
-isTruthy(3.14); // true
-isTruthy('false'); // true
-isTruthy(new Date()); // true
-
-/*
 Declare uma variável chamada ‘carro’, atribuindo à ela um objeto com as seguintes propriedades:
 */
 let carro = {
@@ -74,7 +46,7 @@ let carro = {
     
     if (totalPessoas > this.assentos) {
       let cabem = this.assentos - this.quantidadePessoas;
-      let plural = cabem === 1 ? "pessoa" : "pessoas";
+      let plural = cabem === 1 ? "pessoa" : "pessoas"; /*Operador Ternário: if else compactado*/
       return `Só cabem mais ${cabem} ${plural}!`;
     }
     

@@ -1,6 +1,3 @@
-// Declarar uma variável qualquer, que receba um objeto vazio.
-let objetoVazio = {};
-
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
 */
